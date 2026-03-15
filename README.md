@@ -6,12 +6,12 @@ mew is a small terminal utility that renders Markdown for comfortable reading in
 
 From source:
 
-    cd $GOPATH/src/github.com/grimdork/mew
+    cd $GOPATH/src/github.com/Urethramancer/mew
     go build ./...
 
 Or (recommended) install to $GOBIN:
 
-    go install github.com/grimdork/mew@latest
+    go install github.com/Urethramancer/mew@latest
 
 ## Usage
 
@@ -39,8 +39,9 @@ Examples:
 
 ## Flags
 
-- `-style string` — Chroma style/theme for code blocks (default: "monokai").
+- `-style string` — Chroma style/theme for code blocks (default: "native").
 - `-pager string` — Pager to use. Options: `auto` (default), `less`, `off`, or a command. `auto` will page when stdout is a TTY.
+- `-S` — List all available Chroma styles, one per row.
 
 ## Current features
 
@@ -58,3 +59,7 @@ Examples:
 - Tests and CI
 
 Contributions, bug reports and suggestions welcome.
+
+## License
+
+This project is available under the MIT License. Add a LICENSE file with the full text of the MIT license (e.g., a file named `LICENSE` in the project root).
