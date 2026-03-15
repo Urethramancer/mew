@@ -6,10 +6,10 @@ mew is a small terminal utility that renders Markdown for comfortable reading in
 
 From source:
 
-    cd $GOPATH/src/github.com/Urethramancer/mew
-    go build ./...
+    cd <installation path>/mew
+    go build
 
-Or (recommended) install to $GOBIN:
+Or install to $GOBIN:
 
     go install github.com/Urethramancer/mew@latest
 
@@ -17,25 +17,34 @@ Or (recommended) install to $GOBIN:
 
 Render one or more files:
 
-    mew README.md
-    mew docs/*.md
+```sh
+	mew README.md
+	mew docs/*.md
+```
 
 Read from stdin (useful for piping):
 
-    cat README.md | mew
+```sh
+	cat README.md | mew
+```
 
 If run with no files and attached to a terminal, mew prints a short help message and exits (so it won't block waiting for stdin). When input is coming from a pipe, mew reads stdin as usual.
 
 Examples:
 
-    # view with default pager (respects $PAGER, falls back to `less -R`)
-    mew README.md
+```sh
+	# view with default pager (respects $PAGER, falls back to `less -R`)
+	mew README.md
 
-    # disable paging (prints directly to stdout)
-    mew -pager off README.md
+	# view multiple files in sequence (streams each file into the pager)
+	mew README.md docs/intro.md docs/*.md
 
-    # write rendered output to a file (no pager)
-    mew -pager off README.md > rendered.txt
+	# disable paging (prints directly to stdout)
+	mew -pager off README.md
+
+	# write rendered output to a file (no pager)
+	mew -pager off README.md > rendered.txt
+```
 
 ## Flags
 
