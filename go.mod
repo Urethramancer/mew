@@ -1,13 +1,11 @@
-module github.com/grimdork/mew
+module github.com/Urethramancer/mew
 
 require (
 	github.com/alecthomas/chroma v0.10.0
-	github.com/grimdork/climate v0.24.1
+	github.com/grimdork/climate v0.24.5
 	github.com/muesli/termenv v0.16.0
 	github.com/yuin/goldmark v1.7.16
 )
-
-replace github.com/grimdork/climate => ../climate
 
 require (
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect

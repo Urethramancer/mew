@@ -39,7 +39,7 @@ func main() {
 
 	if opt.GetBool("show-styles") {
 		fmt.Println("Available Chroma styles:")
-		for _, name := range styles.Names() {
+		for _, name := range stylelist {
 			fmt.Println(" -", name)
 		}
 		return
